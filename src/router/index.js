@@ -5,9 +5,20 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: () => import('../views/HomeView.vue')
-    },
+      component: () => import('@/layouts/DefaultLayout.vue'),
+      children: [
+        {
+          path: '',
+          name: 'home',
+          component: () => import('../views/HomeView.vue')
+        },
+        {
+          path: 'buttons',
+          name: 'buttons',
+          component: () => import('../views/ButtonView.vue')
+        }
+      ]
+    }
   ]
 })
 
