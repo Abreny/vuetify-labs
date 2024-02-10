@@ -5,6 +5,7 @@ import { createVuetify } from 'vuetify'
 import { VBtn } from 'vuetify/components'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 import { fa } from 'vuetify/iconsets/fa-svg'
+import { myCustomLightTheme } from '@/assets/theme'
 
 export default createVuetify({
   aliases: {
@@ -22,10 +23,21 @@ export default createVuetify({
   },
   icons: {
     defaultSet: 'mdi',
-    aliases,
+    aliases: {
+      ...aliases,
+      paypal: 'fa:fa-brands fa-paypal',
+      stripe: 'fa:fa-brands fa-stripe',
+      user: 'fa:fa-solid fa-user'
+    },
     sets: {
       fa,
       mdi
+    }
+  },
+  theme: {
+    defaultTheme: 'dark',
+    themes: {
+      myCustomLightTheme
     }
   }
 })

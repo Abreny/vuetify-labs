@@ -9,6 +9,11 @@ const appMenu = [
     icon: 'mdi-emoticon-cool-outline',
     title: 'Icons',
     href: 'icons'
+  },
+  {
+    icon: 'fa:fa-solid fa-moon',
+    title: 'Theme',
+    href: 'theme'
   }
 ]
 </script>
